@@ -1,0 +1,41 @@
+// You are using Java
+import java.util.*;
+class main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int r=sc.nextInt();
+        int unit=sc.nextInt();
+        int n =sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int m = r*unit;
+        if(arr==null)
+        {
+            System.out.print("-1");
+            return;
+        }
+        int sum=0;
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            sum+=arr[i];
+                c++;
+            if(sum>=m)
+            {
+                break;
+            }
+        }
+        System.out.print(c);
+    }
+}
+
+// r=7
+// unit=2
+// n =2
+// arr= 2 8 3 5 7 4 1 2
+//output:4
