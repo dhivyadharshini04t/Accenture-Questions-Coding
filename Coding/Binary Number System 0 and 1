@@ -1,0 +1,37 @@
+// You are using Java
+import java.util.*;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        
+        int res= str.charAt(0)-'0';
+        for(int i=1;i<str.length();i+=2)
+        {
+            char ch=str.charAt(i);
+            int next=str.charAt(i+1)-'0';
+            if(ch=='A')
+            {
+                res=res&next;
+                
+            }
+            else if(ch=='B')
+            {
+                res=res|next;
+                
+            }
+            else if(ch=='C')
+            {
+                res=res^next;
+            }
+        }
+        System.out.print(res);
+    }
+}
+// Input:
+// str: 1C0C1C1A0B1
+
+// Output:
+// 1
