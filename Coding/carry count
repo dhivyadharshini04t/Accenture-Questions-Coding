@@ -1,0 +1,35 @@
+//hypens
+import java.util.*;
+class main
+{
+public static void main (String[] args)
+{
+Scanner sc = new Scanner (System.in);
+{
+       int n =sc.nextInt();
+       int m =sc.nextInt();
+      int carry=0;
+       int count=0;
+       while(n>0||m>0||carry>0)
+       {
+       int d1=n%10;
+       int d2=m%10;
+       int sum=d1+d2+carry;
+           if(sum>=10)
+           {
+               count++;
+               carry=1;
+           }
+           else{
+               carry=0;
+           }
+        n/=10;
+       m/=10;
+       }
+       System.out.print(count);
+    }
+}
+}
+011-CARRY count(2)<-output
+451
+349 
